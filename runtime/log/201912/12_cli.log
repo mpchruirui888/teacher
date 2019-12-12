@@ -1,0 +1,79 @@
+[ 2019-12-12T10:25:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000157s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T10:25:21+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T10:25:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002282s ]
+[ 2019-12-12T10:25:21+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T10:25:21+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001713s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T10:25:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000990s ]
+[ 2019-12-12T10:25:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000715s ]
+[ 2019-12-12T10:59:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000157s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T10:59:32+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T10:59:32+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002471s ]
+[ 2019-12-12T10:59:33+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T10:59:33+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002133s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T10:59:33+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000839s ]
+[ 2019-12-12T10:59:33+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000947s ]
+[ 2019-12-12T10:59:33+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.006809s ]
+[ 2019-12-12T11:01:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:01:27+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:01:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002673s ]
+[ 2019-12-12T11:01:27+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:01:27+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001779s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:01:27+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.001067s ]
+[ 2019-12-12T11:01:27+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.001025s ]
+[ 2019-12-12T11:01:27+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.023095s ]
+[ 2019-12-12T11:21:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000203s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:21:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:21:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002226s ]
+[ 2019-12-12T11:21:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:21:25+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001744s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:21:25+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000996s ]
+[ 2019-12-12T11:21:25+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000786s ]
+[ 2019-12-12T11:22:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000151s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:22:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:22:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002135s ]
+[ 2019-12-12T11:22:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:22:03+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001708s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:22:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.001039s ]
+[ 2019-12-12T11:22:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000818s ]
+[ 2019-12-12T11:22:03+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.007826s ]
+[ 2019-12-12T11:23:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000155s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:23:01+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:23:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002168s ]
+[ 2019-12-12T11:23:01+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:23:01+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001567s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:23:01+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000782s ]
+[ 2019-12-12T11:23:01+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000766s ]
+[ 2019-12-12T11:23:01+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.006218s ]
+[ 2019-12-12T11:27:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000159s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:27:56+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:27:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002374s ]
+[ 2019-12-12T11:27:56+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:27:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.012786s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:27:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000938s ]
+[ 2019-12-12T11:27:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000658s ]
+[ 2019-12-12T11:27:56+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.008666s ]
+[ 2019-12-12T11:31:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000189s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T11:31:04+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T11:31:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002191s ]
+[ 2019-12-12T11:31:04+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T11:31:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003059s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T11:31:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000853s ]
+[ 2019-12-12T11:31:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000798s ]
+[ 2019-12-12T11:31:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.007279s ]
+[ 2019-12-12T14:46:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000154s ]
+[ info ] [ LOG ] INIT File
+[ 2019-12-12T14:46:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-12-12T14:46:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002893s ]
+[ 2019-12-12T14:46:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-12-12T14:46:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002021s ] mysql:host=127.0.0.1;dbname=teacher;charset=utf8
+[ 2019-12-12T14:46:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'salary' [ RunTime:0.000980s ]
+[ 2019-12-12T14:46:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_salary' [ RunTime:0.000932s ]
+[ 2019-12-12T14:46:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'teacher' AND table_name = 'fa_salary' ORDER BY ORDINAL_POSITION [ RunTime:0.007310s ]

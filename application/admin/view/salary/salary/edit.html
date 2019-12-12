@@ -1,0 +1,155 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Username')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-username" data-rule="required" class="form-control" name="row[username]" type="text" value="{$row.username|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Id_card')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-id_card" data-rule="required" class="form-control" name="row[id_card]" type="text" value="{$row.id_card|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sex')}:</label>
+        <div class="col-xs-12 col-sm-8">
+<!--            <input id="c-sex" data-rule="required" class="form-control" name="row[sex]" type="text" value="{$row.sex|htmlentities}">-->
+            {:build_radios('row[sex]', ['men'=>__('Men'), 'women'=>__('Women')], $row['sex'])}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Post_wage')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-post_wage" data-rule="required" class="form-control" name="row[post_wage]" type="text" value="{$row.post_wage|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pay_wages')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-Pay_wages" data-rule="required" class="form-control" name="row[Pay_wages]" type="text" value="{$row.Pay_wages|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Edu_improve')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-edu_improve" data-rule="required" class="form-control" name="row[edu_improve]" type="text" value="{$row.edu_improve|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Keep_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-keep_subsidy" data-rule="required" class="form-control" name="row[keep_subsidy]" type="text" value="{$row.keep_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Region_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-region_subsidy" data-rule="required" class="form-control" name="row[region_subsidy]" type="text" value="{$row.region_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Edu_age_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-edu_age_subsidy" data-rule="required" class="form-control" name="row[edu_age_subsidy]" type="text" value="{$row.edu_age_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Merit_pay_total')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-merit_pay_total" data-rule="required" class="form-control" name="row[merit_pay_total]" type="text" value="{$row.merit_pay_total|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Reform_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-reform_subsidy" data-rule="required" class="form-control" name="row[reform_subsidy]" type="text" value="{$row.reform_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Housing_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-housing_subsidy" class="form-control" name="row[housing_subsidy]" type="text" value="{$row.housing_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Super_subsidy')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-super_subsidy" data-rule="required" class="form-control" name="row[super_subsidy]" type="text" value="{$row.super_subsidy|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Deserve_total')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-deserve_total" data-rule="required" class="form-control" name="row[deserve_total]" type="text" value="{$row.deserve_total|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remove_pension')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remove_pension" data-rule="required" class="form-control" name="row[remove_pension]" type="text" value="{$row.remove_pension|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remove_housing')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remove_housing" data-rule="required" class="form-control" name="row[remove_housing]" type="text" value="{$row.remove_housing|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remove_unemployment')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remove_unemployment" data-rule="required" class="form-control" name="row[remove_unemployment]" type="text" value="{$row.remove_unemployment|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Replace_remove_one')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-replace_remove_one" data-rule="required" class="form-control" name="row[replace_remove_one]" type="text" value="{$row.replace_remove_one|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Replace_remove_two')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-replace_remove_two" data-rule="required" class="form-control" name="row[replace_remove_two]" type="text" value="{$row.replace_remove_two|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Replace_remove_itax')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-replace_remove_itax" data-rule="required" class="form-control" name="row[replace_remove_itax]" type="text" value="{$row.replace_remove_itax|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Salary_total')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-salary_total" data-rule="required" class="form-control" name="row[salary_total]" type="text" value="{$row.salary_total|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" data-rule="required" class="form-control" name="row[remark]" type="text" value="{$row.remark|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group hidden">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Add_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-add_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM" data-use-current="true" name="row[add_time]" type="text" value="{:$row.add_time?datetime($row.add_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Salary_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-salary_time" class="form-control datetimepicker" data-date-format="YYYY-MM" data-use-current="true" name="row[salary_time]" type="text" value="{:$row.salary_time?datetime($row.salary_time):''}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
