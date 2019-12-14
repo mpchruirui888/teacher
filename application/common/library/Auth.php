@@ -2,6 +2,7 @@
 
 namespace app\common\library;
 
+use app\common\model\Teacher;
 use app\common\model\User;
 use app\common\model\UserRule;
 use fast\Random;
@@ -17,7 +18,7 @@ class Auth
     protected static $instance = null;
     protected $_error = '';
     protected $_logined = false;
-    protected $_user = null;
+    protected $_user = 'teacher';
     protected $_token = '';
     //Token默认有效时长
     protected $keeptime = 2592000;
@@ -26,11 +27,11 @@ class Auth
     //默认配置
     protected $config = [];
     protected $options = [];
-    protected $allowFields = ['id', 'username', 'nickname', 'mobile', 'avatar', 'score'];
+    protected $allowFields = ['id', 'username'];
 
     public function __construct($options = [])
     {
-        if ($config = Config::get('user')) {
+        if ($config = Config::get('teacher')) {
             $this->config = array_merge($this->config, $config);
         }
         $this->options = array_merge($this->config, $options);
@@ -193,20 +194,23 @@ class Auth
      * @param string $password 密码
      * @return boolean
      */
-    public function login($account, $password)
+    public function login($id_card, $password)
     {
-        $field = Validate::is($account, 'email') ? 'email' : (Validate::regex($account, '/^1\d{10}$/') ? 'mobile' : 'username');
-        $user = User::get([$field => $account]);
+//        $field = Validate::is($id_card, 'email') ? 'email' : (Validate::regex($account, '/^1\d{10}$/') ? 'mobile' : 'username');
+        $field = 'id_card';
+//        $user = User::get([$field => $id_card]);
+        $user = Teacher::get([$field => $id_card]);
         if (!$user) {
             $this->setError('Account is incorrect');
             return false;
         }
 
-        if ($user->status != 'normal') {
-            $this->setError('Account is locked');
-            return false;
-        }
-        if ($user->password != $this->getEncryptPassword($password, $user->salt)) {
+//        if ($user->status != 'normal') {
+//            $this->setError('Account is locked');
+//            return false;
+//        }
+
+        if ($user->password != $password) {
             $this->setError('Password is incorrect');
             return false;
         }

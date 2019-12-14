@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:104:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\salary\salary\edit.html";i:1576139610;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\layout\default.html";i:1572536367;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:104:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\salary\salary\edit.html";i:1576207667;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\layout\default.html";i:1572536367;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -55,16 +55,16 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Username'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-username" data-rule="required" class="form-control" name="row[username]" type="text" value="<?php echo htmlentities($row['username']); ?>">
+            <input id="c-username" data-rule="required" class="form-control" name="row[username]" type="text" value="<?php echo htmlentities($row['username']); ?>" readonly>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Id_card'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-id_card" data-rule="required" class="form-control" name="row[id_card]" type="text" value="<?php echo htmlentities($row['id_card']); ?>">
+            <input id="c-id_card" data-rule="required" class="form-control" name="row[id_card]" type="text" value="<?php echo htmlentities($row['id_card']); ?>" readonly>
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" style=" pointer-events: none;">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Sex'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
 <!--            <input id="c-sex" data-rule="required" class="form-control" name="row[sex]" type="text" value="<?php echo htmlentities($row['sex']); ?>">-->

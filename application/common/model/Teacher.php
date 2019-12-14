@@ -1,6 +1,6 @@
 <?php
 
-namespace app\admin\model\teacher;
+namespace app\common\model;
 
 use think\Model;
 
@@ -8,9 +8,9 @@ use think\Model;
 class Teacher extends Model
 {
 
+    
 
-
-    protected $resultSetType = 'collection';
+    
 
     // 表名
     protected $name = 'teacher';
@@ -27,17 +27,10 @@ class Teacher extends Model
     protected $append = [
 
     ];
-    
 
     public function getTeacher($id_card){
         $res = $this->where("`id_card` = '$id_card'")->find()->toArray();
         return $res;
     }
-
-
-
-
-
-
 
 }

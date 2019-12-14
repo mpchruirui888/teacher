@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:97:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\index\index.html";i:1575961144;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\header.html";i:1572536366;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\menu.html";i:1575961846;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\control.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:97:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\index\index.html";i:1575961144;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\header.html";i:1572536366;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\menu.html";i:1576219104;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\control.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -204,10 +204,10 @@
         <!-- 菜单可以在 后台管理->权限管理->菜单规则 中进行增删改排序 -->
         <?php echo $menulist; ?>
         <!--以下4行可以删除或改成自己的链接,但建议你在你的网站上添加一个FastAdmin的链接-->
-        <li class="header" data-rel="external"><?php echo __('Links'); ?></li>
-        <li data-rel="external"><a href="https://doc.fastadmin.net" target="_blank"><i class="fa fa-list text-red"></i> <span><?php echo __('Docs'); ?></span></a></li>
-        <li data-rel="external"><a href="https://forum.fastadmin.net" target="_blank"><i class="fa fa-comment text-yellow"></i> <span><?php echo __('Forum'); ?></span></a></li>
-        <li data-rel="external"><a href="https://jq.qq.com/?_wv=1027&k=487PNBb" target="_blank"><i class="fa fa-qq text-aqua"></i> <span><?php echo __('QQ qun'); ?></span></a></li>
+<!--        <li class="header" data-rel="external"><?php echo __('Links'); ?></li>-->
+<!--        <li data-rel="external"><a href="https://doc.fastadmin.net" target="_blank"><i class="fa fa-list text-red"></i> <span><?php echo __('Docs'); ?></span></a></li>-->
+<!--        <li data-rel="external"><a href="https://forum.fastadmin.net" target="_blank"><i class="fa fa-comment text-yellow"></i> <span><?php echo __('Forum'); ?></span></a></li>-->
+<!--        <li data-rel="external"><a href="https://jq.qq.com/?_wv=1027&k=487PNBb" target="_blank"><i class="fa fa-qq text-aqua"></i> <span><?php echo __('QQ qun'); ?></span></a></li>-->
     </ul>
 </section>
             </aside>

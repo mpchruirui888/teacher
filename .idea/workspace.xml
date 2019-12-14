@@ -51,13 +51,17 @@
   <component name="ProjectId" id="1UmOtfT2SqInuWMiGcIcOGXMKWs" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/phpoffice" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/common/model" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\common\model" />
       <recent name="F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\vendor\phpoffice" />
       <recent name="F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\teacher" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\common\model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -87,34 +91,12 @@
       <workItem from="1576042819661" duration="6855000" />
       <workItem from="1576058514653" duration="1249000" />
       <workItem from="1576110835146" duration="28750000" />
+      <workItem from="1576196573349" duration="30065000" />
+      <workItem from="1576301791858" duration="15237000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/application/admin/controller/salary/Salary.php</url>
-          <line>36</line>
-          <properties>
-            <option name="className" value="\app\admin\controller\salary\Salary" />
-            <option name="methodName" value="index" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/application/admin/controller/salary/Salary.php</url>
-          <line>74</line>
-          <properties>
-            <option name="className" value="\app\admin\controller\salary\Salary" />
-            <option name="methodName" value="add" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

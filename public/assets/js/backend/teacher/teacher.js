@@ -55,7 +55,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                     title: __('薪资明细'),
                                     classname: 'btn btn-xs btn-primary btn-addtabs',
                                     icon: 'fa fa-list',
-                                    url: 'salary/salary/index?username=老李',
+                                    url: 'salary/salary/index/id_card={id_card}',
                                 }
                                 ],
                             formatter: Table.api.formatter.operate

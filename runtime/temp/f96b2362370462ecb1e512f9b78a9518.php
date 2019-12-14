@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:105:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\salary\salary\index.html";i:1576145241;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\layout\default.html";i:1572536367;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:105:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\public/../application/admin\view\salary\salary\index.html";i:1576216913;s:90:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\layout\default.html";i:1572536367;s:87:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\meta.html";i:1572536366;s:89:"F:\PHP\preject\phpStudy\PHPTutorial\WWW\teacher\application\admin\view\common\script.html";i:1572536366;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -63,12 +63,16 @@
                         <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled <?php echo $auth->check('salary/salary/edit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i> <?php echo __('Edit'); ?></a>
                         <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled <?php echo $auth->check('salary/salary/del')?'':'hide'; ?>" title="<?php echo __('Delete'); ?>" ><i class="fa fa-trash"></i> <?php echo __('Delete'); ?></a>
 <!--                        <a href="javascript:;" class="btn btn-danger btn-import <?php echo $auth->check('salary/salary/import')?'':'hide'; ?>" title="<?php echo __('Import'); ?>" id="btn-import-file" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false"><i class="fa fa-upload"></i> <?php echo __('Import'); ?></a>-->
-                        <div>
+
                             <input id="datetimepicker" data-rule="required"  class="form-control datetimepicker form-datetime" data-date-format="YYYY-MM"  data-use-current="true"  name="row['salary_time']"  type="text" value="<?php echo date('Y-m'); ?>"   />
-                            <a href="javascript:;"  onclick="check_import()" class="btn btn-danger btn-import <?php echo $auth->check('salary/salary/import?id=123'); ?>" title="<?php echo __('Import'); ?>" id="btn-import-file" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false">
-                                <i class="fa fa-upload"></i> <?php echo __('Import'); ?>
-                            </a>
-                        </div>
+<!--                            <a href="javascript:;"  type="file" name="file" onclick="check_import()" class="btn btn-danger btn-import" title="<?php echo __('Import'); ?>"  data-mimetype="csv,xls,xlsx" data-multiple="false">-->
+<!--                                <i class="fa fa-upload"></i> <?php echo __('Import'); ?>-->
+<!--                            </a>-->
+
+                        <form action="">
+                            <input type="file" id="file" onchange="check_import(this)" name="file">
+                        </form>
+
                     </div>
                     <table id="table" class="table table-striped table-bordered table-hover table-nowrap"
                            data-operate-edit="<?php echo $auth->check('salary/salary/edit'); ?>" 
@@ -84,13 +88,34 @@
 <script>
     var month;
     function check_import(){
-        var result  = $("#datetimepicker").val();
-        if(result){
-            alert('您导入的是'+result+'的数据');
-            month  =  '123564';
-        }else{
-            return false;
-        }
+        var month  = $("#datetimepicker").val();
+            // 上传excel文件
+            var fd = new FormData();
+            fd.append("file", document.getElementById("file").files[0]);
+            $.ajax({
+                url: 'ajax/upload',
+                type:"post",
+                data:fd,
+                processData:false,
+                contentType:false,
+                success:function(data){
+                if(data.code == 1){
+                    var filePath = data.data.url;
+                    $.ajax({
+                        url: 'salary/salary/check_import?month='+ month,
+                        type:"post",
+                        data:{filePath:filePath},
+                        success:function(data){
+                           if(data.code  == 1){
+                               window.location.href=data.url;
+                           }
+                        },
+                    });
+                }
+            },
+            dataType:"json"
+        });
+
     }
 </script>
                             </div>

@@ -3,6 +3,7 @@
 namespace app\api\controller;
 
 use app\common\controller\Api;
+use app\common\model\Teacher;
 
 /**
  * 示例接口
@@ -40,6 +41,8 @@ class Demo extends Api
      */
     public function test()
     {
+        dump(Teacher::all());
+
         $this->success('返回成功', $this->request->param());
     }
 

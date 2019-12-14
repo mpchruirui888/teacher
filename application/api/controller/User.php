@@ -13,7 +13,7 @@ use think\Validate;
  */
 class User extends Api
 {
-    protected $noNeedLogin = ['login', 'mobilelogin', 'register', 'resetpwd', 'changeemail', 'changemobile', 'third'];
+    protected $noNeedLogin = ['login'];
     protected $noNeedRight = '*';
 
     public function _initialize()
@@ -37,12 +37,13 @@ class User extends Api
      */
     public function login()
     {
-        $account = $this->request->request('account');
+        $id_card = $this->request->request('id_card');
         $password = $this->request->request('password');
-        if (!$account || !$password) {
+        if (!$id_card || !$password) {
+
             $this->error(__('Invalid parameters'));
         }
-        $ret = $this->auth->login($account, $password);
+        $ret = $this->auth->login($id_card, $password);
         if ($ret) {
             $data = ['userinfo' => $this->auth->getUserinfo()];
             $this->success(__('Logged in successful'), $data);

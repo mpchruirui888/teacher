@@ -1,6 +1,6 @@
 <?php
 
-namespace app\admin\model\salary;
+namespace app\model\salary;
 
 use app\common\helpFun\HelpFun;
 use think\Model;
@@ -9,8 +9,8 @@ use think\Model;
 class Salary extends Model
 {
 
+    
 
-    protected $resultSetType = 'collection';
     
 
     // 表名
@@ -24,11 +24,11 @@ class Salary extends Model
     protected $updateTime = false;
     protected $deleteTime = false;
 
-//    // 追加属性
-//    protected $append = [
-//        'add_time_text',
-//        'salary_time_text'
-//    ];
+    // 追加属性
+    protected $append = [
+        'add_time_text',
+        'salary_time_text'
+    ];
     
 
     

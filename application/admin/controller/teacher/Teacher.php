@@ -3,6 +3,7 @@
 namespace app\admin\controller\teacher;
 
 use app\common\controller\Backend;
+use app\common\helpFun\HelpFun;
 use PHPExcel_IOFactory;
 use think\Db;
 use think\Exception;
@@ -90,6 +91,9 @@ class Teacher extends Backend
         if ($this->request->isPost()) {
             $params = $this->request->post("row/a");
             if ($params) {
+                if(! HelpFun::is_idcard(trim($params['id_card']))){
+                    return json(['code'=>2,'url'=>'http://teacher.com/FYR2NjtXSf.php/teacher/teacher/index?addtabs=1','wait'=>3,'msg'=>'请核对身份证信息！']);
+                }
                 $params['add_time'] = time();
                 $params['password'] = $params['id_card'];
                 $params = $this->preExcludeFields($params);
@@ -135,8 +139,17 @@ class Teacher extends Backend
         if ($this->request->isPost()) {
             $params = $this->request->post("row/a");
             if ($params) {
+//              检查身份证信息
+                if(! HelpFun::is_idcard(trim($params['id_card']))){
+                    return json(['code'=>2,'url'=>'http://teacher.com/FYR2NjtXSf.php/teacher/teacher/index?addtabs=1','wait'=>3,'msg'=>'请核对身份证信息！']);
+                }
+//              数据库查重
+                $result = $this->model->getTeacher($params['id_card']);
+                if(count($result)>0){
+                   return json(['code'=>2,'url'=>'http://teacher.com/FYR2NjtXSf.php/teacher/teacher/index?addtabs=1','wait'=>3,'msg'=>'该身份证已被使用！']);
+                }
                 $params['add_time'] = time();
-                $params['password'] = $params['id_card'];
+                $params['password'] = $params['id_card'];  //密码等于身份证
                 $params = $this->preExcludeFields($params);
 
                 if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
@@ -173,7 +186,6 @@ class Teacher extends Backend
         }
         return $this->view->fetch();
     }
-
     /**
      * 导入教师
      */
@@ -194,7 +206,7 @@ class Teacher extends Backend
             die('加载文件发生错误："'.pathinfo($filePath,PATHINFO_BASENAME).'": '.$e->getMessage());
         }
         $sheet = $objPHPExcel->getSheet(0);
-        $data=$sheet->toArray();//该方法读取不到图片 图片需单独处理
+        $data=$sheet->toArray();
         for ($i = 1;$i<count($data);$i++){
                 $arr[$i-1]['company'] =  $data[$i][1];
                 $arr[$i-1]['username'] = $data[$i][2];
